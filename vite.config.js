@@ -1,7 +1,10 @@
 import path from 'path';
 import handlebars from 'vite-plugin-handlebars';
 
+const ASSET_URL = process.env.ASSET_URL || '';
+
 export default {
+  base: ASSET_URL,
   root: path.resolve(__dirname, 'src'),
   plugins: [
     handlebars({
